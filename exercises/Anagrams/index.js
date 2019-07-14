@@ -11,9 +11,11 @@
  * anagrams('RAIL! SAFETY!', 'fairy tales') === true
  * anagrams('Hi there', 'Bye there') === false
  */
+function anagram(stringA, stringB) {
+    let arr1 = stringA.toLowerCase().split('').sort().filter(char => char.match(/[a-zA-z]/)).join('')
+    let arr2 = stringB.toLowerCase().split('').sort().filter(char => char.match(/[a-zA-z]/)).join('')
 
-function anagrams(stringA, stringB) {
-
+        return arr1 === arr2
 }
 
 module.exports = anagrams;
